@@ -89,7 +89,7 @@ public class NQueenQuestion {
 
     /**
      * 判断某个元素是否可以放置的棋盘上的某个位置。
-     * @param positions: 元素当前的拜访位置。
+     * @param positions: 元素当前的摆放位置。
      * @param currPosition: 此元素是否可以用某个位置。
      * @return
      */
