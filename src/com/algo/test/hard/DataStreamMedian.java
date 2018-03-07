@@ -14,7 +14,8 @@ public class DataStreamMedian {
 	
 	/**
 	 * nums的第index个数的数值为num。
-	 * nums当前是排序的状态，需要将num插入到nums中的合适位置。
+	 * sortedNum的前index个数是排序的状态，需要将num插入到sortedNum中的合适位置，使其继续保持排序状态。
+	 * 找到sortedNum中第一个比当前数小，且比下一个数大的数，将nums插入到sortedNum中
 	 * 插入之后获取第(index-1)/2个元素
 	 * @param nums
 	 * @param index
@@ -25,8 +26,10 @@ public class DataStreamMedian {
 		int indexToInsert = 0;
 		for(int i = 0; i < index; i++){
 			if(num <= sortedNum[0]){
+				//如果插入的数比最小的数小，则应该将其插入第一个数中，后边的数后移
 				break;
 			}else if(num >= sortedNum[index-1]){
+				//如果插入的数比上一个数大，
 				indexToInsert = index;
 				break;
 			}else if(num >= sortedNum[i] && (i+1 <= index || num <= sortedNum[i+1])){
@@ -41,6 +44,8 @@ public class DataStreamMedian {
 		
 		sortedNum[indexToInsert] = num;
 	}
+	
+	//sortedNum用于插入新元素后，将其插入到已经排好序的数组中。
 	
 	public static int[] getMedianOfArray(int[] nums){
 		int[] sortedNums = new int[nums.length];

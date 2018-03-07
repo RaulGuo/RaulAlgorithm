@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 集合的全排列问题。
  * 给定一个可能包含重复元素的数组，找出所有可能的排列。
+ * 
+ * 我们可以找到将数组进行排序，排序后当做最小的排列。然后逐步寻找下一个排列；
+ * 
  * http://blog.csdn.net/shineboyxxb/article/details/52163202
  * @author guozhen@proudsmart.com
  *

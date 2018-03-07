@@ -23,7 +23,7 @@ import java.util.List;
  */
 
 public class NQueenQuestion {
-    /*
+    /**
      * @param n: The number of queens
      * @return: All distinct solutions
      * 解决思路：
@@ -35,7 +35,7 @@ public class NQueenQuestion {
 	
     public static List<int[]> placeQueen(int n) {
     	List<int[]> list = new ArrayList<int[]>();
-    	//将数组的初始值设为-1，代表该元素的位置尚未确定（-1还有一个好处是：在while循环里，对元素的位置地形递增操作时需要+1，-1进行+1操作恰好是0）。
+    	//将数组的初始值设为-1，代表该元素的位置尚未确定（-1还有一个好处是：在while循环里，对元素的位置进行递增操作时需要+1，-1进行+1操作恰好是0）。
     	int initPosition = -1;
     	
     	int[] positions = new int[n];

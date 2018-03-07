@@ -7,7 +7,7 @@ import java.util.function.BinaryOperator;
 
 /**
  * 筛子求和的问题。
- * 扔n个筛子，向上的数字之和为S。给定N，求S所有可能的值以及每个只对应的概率。
+ * 扔n个筛子，向上的数字之和为S。给定N，求S所有可能的值以及每个值对应的概率。
  * http://www.lintcode.com/zh-cn/problem/dices-sum/
  * @author guozhen@proudsmart.com
  *
